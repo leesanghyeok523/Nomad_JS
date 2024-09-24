@@ -41,10 +41,17 @@ const quotes = [
     author: "Sheda Savage",
   },
 ];
-
+// HTML 요소에서 id가 'quote-text'인 요소를 선택하여 변수에 저장
 const quoteText = document.querySelector("#quote-text");
+
+// HTML 요소에서 id가 'quote-author'인 요소를 선택하여 변수에 저장
 const quoteAuthor = document.querySelector("#quote-author");
+
+// 명언 배열에서 무작위로 하나의 명언을 선택
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
+// 선택된 명언의 quote 속성을 'quote-text' 요소의 텍스트로 설정
 quoteText.innerText = todaysQuote.quote;
+
+// 선택된 명언의 author 속성을 'quote-author' 요소의 텍스트로 설정
 quoteAuthor.innerText = `— ${todaysQuote.author}`;
